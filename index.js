@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs/promises");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
@@ -19,7 +19,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Please enter your installation instructions: '
+        message: 'Please enter installation instructions: '
     },
     {
         type: 'input',
@@ -34,7 +34,7 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'Please enter test infomation: ' //check wording/what this is for
+        message: 'Please enter test instructions: ' //check wording/what this is for
     },
     {
         type: 'input',
@@ -45,6 +45,12 @@ const questions = [
         type: 'input',
         name: 'email',
         message: 'What is your GitHub username?'
+    },
+    {
+        type: 'list', // select
+        name: 'license',
+        message: 'Please select a license for your project',
+        choices: ['MIT', 'ISC'] //more needed 
     }
 ];
 
@@ -56,7 +62,9 @@ function writeToFile(fileName, data) {
 function init() {
 //rename old readme?
 //run questions
-
+    inquirer.prompt(questions)
+        .then((answers) => console.log(answers));
+    
 }
 
 // function call to initialize program
