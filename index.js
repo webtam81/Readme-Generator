@@ -66,12 +66,13 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
 //run questions
-    inquirer.prompt(questions)
-        .then((data) => console.log(data)) //TODO rm
-        .then((data) => writeToFile('README.txt', generateMarkdown(data)))
-        .then(() => console.log('README file successfully generated'))
-        .catch((err) => console.error(err));
-    
+    inquirer.prompt(questions).then((data) => {
+        console.log(data);
+        //fs.writeFile('README.txt', JSON.stringify(answers));
+        writeToFile('README.txt', generateMarkdown(data));
+        console.log('README file successfully generated');
+    })
+    .catch((err) => console.error(err));
 }
 
 // function call to initialize program
