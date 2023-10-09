@@ -4,14 +4,14 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-//project title, description, table of contents, installtion, usage, license, contributing, tests, questions
+//project title, description*, table of contents, installtion*, usage*, license*, contributing*, tests*, questions
 const questions = [
     {
         type: 'input',
         name: 'title',
         message: 'Please enter your project title: '
     },
-    {
+    /*{
         type: 'input',
         name: 'desc',
         message: 'Please enter your project description: '
@@ -45,7 +45,7 @@ const questions = [
         type: 'input',
         name: 'email',
         message: 'What is your GitHub username?'
-    },
+    },*/
     {
         type: 'list', // select
         name: 'license',
@@ -55,17 +55,26 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(fileName, data) { 
+    fileName = 'README.txt';
+    fs.writeFile(fileName, 'testingg t');
 }
 
 // function to initialize program
 function init() {
 //rename old readme?
 //run questions
+     
     inquirer.prompt(questions)
-        .then((answers) => console.log(answers));
+        .then((answers) => console.log(answers))
+        .then(() => writeToFile())
+        .catch((err) => console.error(err));
     
 }
 
 // function call to initialize program
 init();
+
+
+//TODO
+//gitignore for generated files...?
