@@ -54,20 +54,22 @@ const questions = [
     }
 ];
 
+
+
 // function to write README file
 function writeToFile(fileName, data) { 
-    fileName = 'README.txt';
-    fs.writeFile(fileName, 'testingg t');
+    //rename old readme?
+    //fs.writeFile(fileName,'newdata');
+    fs.writeFile(fileName,data);
 }
 
 // function to initialize program
 function init() {
-//rename old readme?
 //run questions
-     
     inquirer.prompt(questions)
-        .then((answers) => console.log(answers))
-        .then(() => writeToFile())
+        .then((data) => console.log(data)) //TODO rm
+        .then((data) => writeToFile('README.txt', generateMarkdown(data)))
+        .then(() => console.log('README file successfully generated'))
         .catch((err) => console.error(err));
     
 }
