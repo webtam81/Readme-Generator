@@ -9,43 +9,51 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Please enter your project title: '
-    },
-    /*{
-        type: 'input',
-        name: 'desc',
-        message: 'Please enter your project description: '
+        message: 'Please enter your project title: ',
+        default: 'Readme Generator'
     },
     {
         type: 'input',
-        name: 'installation',
-        message: 'Please enter installation instructions: '
+        name: 'desc',
+        message: 'Please enter your project description: ',
+        default: 'A command line based readme generator using node.js. This takes input from a user and generates an professional README.md file from the input with subheadings and a table of contents.'
+    },
+    {
+        type: 'input',
+        name: 'install',
+        message: 'Please enter installation instructions: ',
+        default: 'To install, please install.'
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Please enter usage information: '
+        message: 'Please enter usage information: ',
+        default: 'Enter node.js then follow the prompts.'
     },
     {
         type: 'input',
         name: 'contribute',
-        message: 'Please enter contribution guidelines: '
+        message: 'Please enter contribution guidelines: ',
+        default: 'To contribute, please visit the github project page at github.com'
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'Please enter test instructions: ' //check wording/what this is for
+        message: 'Please enter test instructions: ', //check wording/what this is for
+        default: 'Feel free to test'
     },
     {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?'
+        message: 'What is your email address?',
+        default: 'e@mail.com'
     },
     {
         type: 'input',
         name: 'email',
-        message: 'What is your GitHub username?'
-    },*/
+        message: 'What is your GitHub username?',
+        default: 'github'
+    },
     {
         type: 'list', // select
         name: 'license',
