@@ -1,10 +1,3 @@
-// function to create license button and section
-function createLicenseInfo(data) {
-  if (data.license) {};
-}
-
-
-
 // function to generate toc
 function generateTOC() {
   return `* [Installation](#installation)\n
@@ -17,7 +10,15 @@ function generateTOC() {
 
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}\n
+  let licenseString = data.license;
+  licenseString = licenseString.replaceAll(' ','_');
+  licenseString = licenseString.replaceAll('-','--');
+  console.log(licenseString);
+  let licenseBadge;
+  
+  licenseBadge = `![License Badge](https://img.shields.io/badge/license-${licenseString}-brightgreen)`;
+  return `${licenseBadge}\n
+# ${data.title}\n
 ## Description\n
 ${data.desc}\n
 ## Table of Contents\n
@@ -27,7 +28,7 @@ ${data.install}\n
 ## Usage\n
 ${data.usage}\n
 ## License\n
-${data.license}\n
+This project is covered under the **${data.license}** license.\n
 ## Contributing\n
 ${data.contribute}\n
 ## Tests\n
