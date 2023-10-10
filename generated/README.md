@@ -1,10 +1,10 @@
-![License Badge](https://img.shields.io/badge/license-BSD--3--Clause--Clear-brightgreen)
+![License Badge](https://img.shields.io/badge/license-MIT-brightgreen)
 
 # Readme Generator
 
 ## Description
 
-A command line based readme generator using node.js. This takes input from a user and generates an professional README.md file from the input with subheadings and a table of contents.
+This is a readme file generator created with Node.js. It takes user input from the command line and generates a readme file based on it.
 
 ## Table of Contents
 
@@ -23,24 +23,24 @@ A command line based readme generator using node.js. This takes input from a use
 
 ## Installation
 
-To install, please install.
+Clone or download the project from github. Make sure you have node.js instealld on your machine. Run npm install to install dependencies.
 
 ## Usage
 
-Enter node index.js then follow the prompts.
+Once set up, run 'node index.js' from the command line to start the program. A series of prompts will appear. Please enter the information you want the readme to contain.
 
 ## License
 
-This project is covered under the **BSD-3-Clause-Clear** license.
+This project is covered under the **MIT** license.
 
 ## Contributing
 
-To contribute, please visit the github project page at github.com
+If you would like to contribute, please contact me via github.
 
 ## Tests
 
-Feel free to test
+Testing welcome. Please send your results to me via the contact details below
 
 ## Questions
 
-If you have any questions, please get in touch via [email](mailto:e@mail.com) or via [GitHub](https://github.com/github).
+If you have any questions, please get in touch via [email](mailto:e@mail.com) or via [GitHub](https://github.com/webtam81).
