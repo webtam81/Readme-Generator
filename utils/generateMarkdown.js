@@ -3,9 +3,17 @@ function createLicenseInfo(data) {
   if (data.license) {};
 }
 
-// function to create questions section (email and github)
+
 
 // function to generate toc
+function generateTOC() {
+  return `* [Installation](#installation)\n
+* [Usage](#usage)\n
+* [License](#license)\n
+* [Contributing](#contributing)\n
+* [Tests](#tests)\n
+* [Questions](#questions)\n`;
+}
 
 // function to generate markdown for README
 function generateMarkdown(data) {
@@ -13,7 +21,7 @@ function generateMarkdown(data) {
 ## Description\n
 ${data.desc}\n
 ## Table of Contents\n
-TABLE OF CONTENTS GOES HERE\n
+${generateTOC()}\n
 ## Installation\n
 ${data.install}\n
 ## Usage\n
@@ -25,7 +33,7 @@ ${data.contribute}\n
 ## Tests\n
 ${data.tests}\n
 ## Questions\n
-If you have any questions, please get in touch via email or via github.
+If you have any questions, please get in touch via [email](mailto:${data.email}) or via [GitHub](https://github.com/${data.github}).
 `;
 }
 
