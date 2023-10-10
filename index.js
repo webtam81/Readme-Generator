@@ -77,7 +77,7 @@ function init() {
     inquirer.prompt(questions).then((data) => {
         console.log(data);
         //fs.writeFile('README.txt', JSON.stringify(answers));
-        writeToFile('README.txt', generateMarkdown(data));
+        writeToFile('./generated/README.md', generateMarkdown(data));
         console.log('README file successfully generated');
     })
     .catch((err) => console.error(err));
