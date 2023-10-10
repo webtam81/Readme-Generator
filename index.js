@@ -4,7 +4,6 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-//project title, description*, table of contents, installtion*, usage*, license*, contributing*, tests*, questions
 const questions = [
     {
         type: 'input',
@@ -39,7 +38,7 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'Please enter test instructions: ', //check wording/what this is for
+        message: 'Please enter test instructions: ', 
         default: 'Feel free to test'
     },
     {
@@ -55,7 +54,7 @@ const questions = [
         default: 'github'
     },
     {
-        type: 'list', // select
+        type: 'list', 
         name: 'license',
         message: 'Please select a license for your project',
         choices: [
@@ -99,11 +98,8 @@ const questions = [
     }
 ];
 
-
-
 // function to write README file
 function writeToFile(fileName, data) { 
-    //fs.writeFile(fileName,'newdata');
     fs.writeFile(fileName,data);
 }
 
@@ -112,7 +108,6 @@ function init() {
 //run questions
     inquirer.prompt(questions).then((data) => {
         console.log(data);
-        //fs.writeFile('README.txt', JSON.stringify(answers));
         writeToFile('./generated/README.md', generateMarkdown(data));
         console.log('README file successfully generated');
     })
@@ -121,7 +116,3 @@ function init() {
 
 // function call to initialize program
 init();
-
-
-//TODO
-//gitignore for generated files...?
