@@ -1,4 +1,4 @@
-![License Badge](https://img.shields.io/badge/license-ECL--2.0-brightgreen)
+![License Badge](https://img.shields.io/badge/license-BSD--3--Clause--Clear-brightgreen)
 
 # Readme Generator
 
@@ -27,11 +27,11 @@ To install, please install.
 
 ## Usage
 
-Enter node.js then follow the prompts.
+Enter node index.js then follow the prompts.
 
 ## License
 
-This project is covered under the **ECL-2.0** license.
+This project is covered under the **BSD-3-Clause-Clear** license.
 
 ## Contributing
 

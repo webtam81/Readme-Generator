@@ -13,7 +13,6 @@ function generateMarkdown(data) {
   let licenseString = data.license;
   licenseString = licenseString.replaceAll(' ','_');
   licenseString = licenseString.replaceAll('-','--');
-  console.log(licenseString);
   let licenseBadge;
   
   licenseBadge = `![License Badge](https://img.shields.io/badge/license-${licenseString}-brightgreen)`;

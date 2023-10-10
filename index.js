@@ -8,50 +8,50 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Please enter your project title: ',
-        default: 'Readme Generator'
+        message: 'Please enter your project title: '/*,
+        default: 'Readme Generator'*/
     },
     {
         type: 'input',
         name: 'desc',
-        message: 'Please enter your project description: ',
-        default: 'A command line based readme generator using node.js. This takes input from a user and generates an professional README.md file from the input with subheadings and a table of contents.'
+        message: 'Please enter your project description: '/*,
+        default: 'A command line based readme generator using node.js. This takes input from a user and generates an professional README.md file from the input with subheadings and a table of contents.'*/
     },
     {
         type: 'input',
         name: 'install',
-        message: 'Please enter installation instructions: ',
-        default: 'To install, please install.'
+        message: 'Please enter installation instructions: '/*,
+        default: 'To install, please install.'*/
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Please enter usage information: ',
-        default: 'Enter node.js then follow the prompts.'
+        message: 'Please enter usage information: '/*,
+        default: 'Enter node index.js then follow the prompts.'*/
     },
     {
         type: 'input',
         name: 'contribute',
-        message: 'Please enter contribution guidelines: ',
-        default: 'To contribute, please visit the github project page at github.com'
+        message: 'Please enter contribution guidelines: '/*,
+        default: 'To contribute, please visit the github project page at github.com'*/
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'Please enter test instructions: ', 
-        default: 'Feel free to test'
+        message: 'Please enter test instructions: '/*, 
+        default: 'Feel free to test'*/
     },
     {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?',
-        default: 'e@mail.com'
+        message: 'What is your email address?'/*,
+        default: 'e@mail.com'*/
     },
     {
         type: 'input',
         name: 'github',
-        message: 'What is your GitHub username?',
-        default: 'github'
+        message: 'What is your GitHub username?'/*,
+        default: 'github'*/
     },
     {
         type: 'list', 
@@ -107,7 +107,6 @@ function writeToFile(fileName, data) {
 function init() {
 //run questions
     inquirer.prompt(questions).then((data) => {
-        console.log(data);
         writeToFile('./generated/README.md', generateMarkdown(data));
         console.log('README file successfully generated');
     })
